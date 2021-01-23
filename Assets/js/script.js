@@ -37,7 +37,7 @@ var questions = [
 
 // ties timer to start click //
 document.getElementById("start").onclick = function () {
-    var sixtySeconds = 3,
+    var sixtySeconds = 30,
         display = document.querySelector('.timer');
     startTimer(sixtySeconds, display);
 };
