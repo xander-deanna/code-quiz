@@ -37,6 +37,7 @@ start.addEventListener("click", function () {
         }, 1000);
     }
     render(questionIndex);
+    return
 });
 
 // questions, choices, and answers in an array
