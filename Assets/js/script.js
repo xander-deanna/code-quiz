@@ -194,7 +194,6 @@ function gameOver() {
         var initials = createInput.value;
 
         if (initials === null) {
-
             console.log("No value entered!");
 
         } else {
@@ -214,6 +213,6 @@ function gameOver() {
             localStorage.setItem("allScores", newScore);
             // Travels to final page
             window.location.replace("./Highscores.html");
-        }
+        };
     });
-}
+};
