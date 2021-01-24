@@ -38,11 +38,6 @@ body {
     border: 1px solid #02eeff;
     border-radius: 5px;
 }
-.response {
-    align-items: center;
-    align-content: center;
-    text-align: center;
-}
 
 .btn {
     color: #02eeff;
@@ -55,8 +50,8 @@ body {
     display: inline-block;
     font-size: 1rem;
     line-height: 22px;
-    margin: 5px 0px 5px 0px;
-    padding: 14px 34px;
+    margin: 5px 10px 5px 10px;
+    padding: 5px 10px 5px 10px;
 }    
 .btn:hover {
     color: #02eeff;

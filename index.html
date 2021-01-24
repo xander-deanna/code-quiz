@@ -21,6 +21,10 @@
     </head>
 
     <body>
+      <audio id="wrongSound" src="./Assets/sounds/wrong.mp3"></audio>
+      <audio id="rightSound" src="./Assets/sounds/right.mp3"></audio>
+      <audio id="endSound" src="./Assets/sounds/end.mp3"></audio>
+
       <!-- navbar -->
       <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -30,7 +34,7 @@
 
             <!-- timer/countdown on navbar -->
             <ul class="navbar-nav mr-auto mb-md-0">
-                <li class="nav-item timer">
+                <li class="nav-item timer" id="currentTime">
                   
                 </li>
             </ul>
@@ -43,29 +47,17 @@
         <div class="row main-div-margin quiz-box-margin">
           <!-- quiz box -->
           <div class="col-md-12 main-content-box quiz-box">
-            <h3 id="question">About The Quiz</h3>
-            <hr>
-            <p class="choices">Hi there! Welcome to my javaScript quiz. Just press "Start" go get started. Once you press "Start", a timer in the upper right-hand corner will begin a countdown and the quiz will begin to display questions. Answer quickly, but be careful! Each wrong answer takes away 5 seconds from the clock. The quiz ends once your time has run out. Good luck!
-            </p>
-            <ul class="btns">
-                <li>
-                    <button id="start" class="btn">Start</button>
-                </li>
-                <!-- <li>
-                    <button id="btn1" class="btn">Start</button>
-                </li>
-                <li>
-                    <button id="btn2" class="btn">Start</button>
-                </li>
-                <li>
-                    <button id="btn3" class="btn">Start</button>
-                </li> 
-                <li>
-                    <button id="btn3" class="btn">Start</button>
-                </li> -->
-            </ul>
-            <hr>
-            <div><p class="response"> </p></div>
+            <div id="wrapper">
+              <div id="questionsDiv">
+                  <h2>About The Quiz</h2>
+                  <hr>
+                  <p>Hi there! Welcome to my javaScript quiz. Please press "Start" to begin. Once you've started, a timer will appear in the upper right-hand corner, and a countdown will begin to display questions. Answer quickly, but be careful! Each wrong answer takes away 5 seconds from the clock. The quiz ends once your time has run out, or you've attempted all questions. Good luck!</p>
+                  <ul id="choicesUl"></ul>
+                  <!-- Buttons -->
+                  <button id="start" class="btn">Start Quiz</button>
+              </div>
+      
+          </div>
           </div>
         </div>
       </div>
