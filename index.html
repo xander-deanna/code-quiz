@@ -17,6 +17,7 @@
     </head>
 
     <body>
+      <!-- audio files -->
       <audio id="wrongSound" src="./Assets/sounds/wrong.mp3"></audio>
       <audio id="rightSound" src="./Assets/sounds/right.mp3"></audio>
       <audio id="endSound" src="./Assets/sounds/end.mp3"></audio>
@@ -26,22 +27,19 @@
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
           <div class="container-fluid">
             <!-- highscores link on navbar -->
-            <a class="navbar-brand highscore-link" href="https://xander-deanna.github.io/code-quiz/Highscores">View Highscores</a>
+            <a class="navbar-brand highscore-link">View Highscores</a>
 
             <!-- timer/countdown on navbar -->
             <ul class="navbar-nav mr-auto mb-md-0">
-                <li class="nav-item timer" id="currentTime">
-                  
-                </li>
+                <li class="nav-item timer" id="currentTime"></li>
             </ul>
           </div>
         </nav>
       </header>
 
-      <!--flexbox/main quiz content-->
-      <div class="container">
+      <!-- quiz content -->
+      <div class="container question-container">
         <div class="row main-div-margin quiz-box-margin">
-          <!-- quiz box -->
           <div class="col-md-12 main-content-box quiz-box">
             <div id="wrapper">
               <div id="questionsDiv">
@@ -52,12 +50,29 @@
                   <!-- buttons -->
                   <button id="start" class="btn">Start Quiz</button>
               </div>
-      
-          </div>
+            </div>
           </div>
         </div>
       </div>
 
+      <!--highscore content-->
+      <div class="row main-div-margin quiz-box-margin highscore-container d-none">
+        <div class="col-md-12 main-content-box quiz-box">
+          <div id="wrapper">
+            <div id="currentTime">
+              </div>
+                <div id="questionsDiv">
+                  <h2>Highscores</h2>
+                  <hr>
+                  <ul id="highScore"></ul>
+                  <!-- buttons -->
+                  <button id="goBack" class="btn" onclick="location.href='https://xander-deanna.github.io/code-quiz/'" type="button">Go Back</button>
+                  <button id="clear" value="reset" class="btn">Clear Highscore</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    
       <!-- footer-->
       <footer class="footer mt-auto py-3 bg-dark">
         <div class="container">
