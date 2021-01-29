@@ -224,11 +224,14 @@ createSubmit.addEventListener("click", function () {
         localStorage.setItem("allScores", newScore);
 
         // displays highscore content from local storage
+        var displayScores = document.createElement("li").innerHTML
+        var scoreList = document.querySelector(".highScore")
         function renderHighScores() {
-
             // to loop through all highscores in local storage
             for (var i = 0; i < allScores.length; i++) {
-            }
+                displayScores = localStorage.getItem(finalScore);
+                appendChild(scoreList);
+            };
         };
 
         // replaces quiz content with highscores content
