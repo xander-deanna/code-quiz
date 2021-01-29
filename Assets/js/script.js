@@ -223,9 +223,19 @@ createSubmit.addEventListener("click", function () {
         var newScore = JSON.stringify(allScores);
         localStorage.setItem("allScores", newScore);
 
+        // displays highscore content from local storage
+        function renderHighScores() {
+
+            // to loop through all highscores in local storage
+            for (var i = 0; i < allScores.length; i++) {
+            }
+        };
+
         // replaces quiz content with highscores content
         questionContainer.setAttribute("style", "display: none !important")
         highscoreContainer.setAttribute("style", "display: block !important")
+
+        renderHighScores();
     };
 });
 };

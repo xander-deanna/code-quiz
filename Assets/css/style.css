@@ -10,7 +10,7 @@ h3 {
 /* background image */
 body {
     background-size: 100px;
-    background-image: url("../images/backgroundimage4.gif");
+    background-image: url("../images/backgroundimage.gif");
     background-position: center;
     background-repeat: repeat;
 }
@@ -82,6 +82,4 @@ footer {color: #ffffff8c;
     bottom: 0; width: 100%; 
     text-align: center; 
     border-top: 1px solid #02eeff;
-}
-
-    
+} 

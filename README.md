@@ -14,7 +14,7 @@ From here I continued to work on the functions in my script and thought about ho
 
 After I had the site rendering the HTML I needed, I got started on some funtions to help me compare right and wrong answers, as well as penalize the user for wrong answers. For fun, I added some sound effects. These had to first be linked through the HTML but were referenced using JS variables and "getElementByID".
 
-I'm much farther along than I was before and am going to be doing another push to my repository. I may or may not be done with the highscore page by then, however I'm quite happy with what I have so far regardless. If I have time after completing the highscore page, I may search for better questions / add more to the quiz. Enjoy!
+After speaking with my tutor I noticed some issues in my script that were preventind the highscores from displaying correctly, and I was able to address these with her help. We decided it was best to display the highscores on the index.html page my manipulating css display attributes in javaScript, instead of having the highscores display on an entirely seperate page. Once I was able to get this working, I simply has to append the highscores from local storage, onto a <ul> tag.
 
 ---------------------------------------------------------
 https://github.com/xander-deanna/code-quiz
