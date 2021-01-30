@@ -1,88 +1,88 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Coding Quiz Challenge</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <title>Coding Quiz Challenge</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+      <!-- bootstrap -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+      <!-- custom stylesheet (overrides bootstrap in the cascade)-->
+      <link href="./Assets/css/style.css" rel="stylesheet">
         
-        <!-- custom stylesheet (overrides bootstrap in the cascade)-->
-        <link href="./Assets/css/style.css" rel="stylesheet">
-        
-        <!-- inconsolata google font-->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400&display=swap" rel="stylesheet">
-    </head>
+      <!-- inconsolata google font-->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400&display=swap" rel="stylesheet">
+  </head>
 
-    <body>
-      <!-- audio files -->
-      <audio id="wrongSound" src="./Assets/sounds/wrong.mp3"></audio>
-      <audio id="rightSound" src="./Assets/sounds/right.mp3"></audio>
-      <audio id="endSound" src="./Assets/sounds/end.mp3"></audio>
+  <body>
+    <!-- audio files -->
+    <audio id="wrongSound" src="./Assets/sounds/wrong.mp3"></audio>
+    <audio id="rightSound" src="./Assets/sounds/right.mp3"></audio>
+    <audio id="endSound" src="./Assets/sounds/end.mp3"></audio>
 
-      <!-- navbar -->
-      <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-          <div class="container-fluid">
-            <!-- highscores link on navbar -->
-            <a class="navbar-brand highscore-link">View Highscores</a>
+    <!-- navbar -->
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <!-- highscores link on navbar -->
+          <a class="navbar-brand highscore-link" href="https://xander-deanna.github.io/code-quiz/">Start Over</a>
 
-            <!-- timer/countdown on navbar -->
-            <ul class="navbar-nav mr-auto mb-md-0">
-                <li class="nav-item timer" id="currentTime"></li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+          <!-- timer/countdown on navbar -->
+          <ul class="navbar-nav mr-auto mb-md-0">
+              <li class="nav-item timer" id="currentTime"></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-      <!-- quiz content -->
-      <div class="container question-container">
-        <div class="row main-div-margin quiz-box-margin">
-          <div class="col-md-12 main-content-box quiz-box">
-            <div id="wrapper">
-              <div id="questionsDiv">
-                  <h2>About The Quiz</h2>
-                  <hr>
-                  <p>Hi there! Welcome to my javaScript quiz. Please press "Start" to begin. Once you've started, a timer will appear in the upper right-hand corner, and a countdown will begin to display questions. Answer quickly, but be careful! Each wrong answer takes away 5 seconds from the clock. The quiz ends once your time has run out, or you've attempted all questions. Good luck!</p>
-                  <ul id="choicesUl"></ul>
-                  <!-- buttons -->
-                  <button id="start" class="btn">Start Quiz</button>
-              </div>
+    <!-- quiz content -->
+    <div class="container question-container">
+      <div class="row main-div-margin quiz-box-margin">
+        <div class="col-md-12 main-content-box quiz-box">
+          <div id="wrapper">
+            <div id="questionsDiv">
+                <h2>About The Quiz</h2>
+                <hr>
+                <p>Hi there! Welcome to my javaScript quiz. Please press "Start" to begin. Once you've started, a timer will appear in the upper right-hand corner, and a countdown will begin to display questions. Answer quickly, but be careful! Each wrong answer takes away 5 seconds from the clock. The quiz ends once your time has run out, or you've attempted all questions. Good luck!</p>
+                <ul id="choicesUl"></ul>
+                <!-- buttons -->
+                <button id="start" class="btn">Start Quiz</button>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!--highscore content-->
-      <div class="container highscore-container d-none">
-        <div class="row main-div-margin quiz-box-margin">
-          <div class="col-md-12 main-content-box quiz-box">
-            <div id="wrapper">
-              <div id="currentTime">
-                </div>
-                  <div id="questionsDiv">
-                    <h2>Highscores</h2>
-                    <hr>
-                    <ul id="highScore"></ul>
-                    <!-- buttons -->
-                    <button id="goBack" class="btn" onclick="location.href='https://xander-deanna.github.io/code-quiz/'" type="button">Go Back</button>
-                    <button id="clear" value="reset" class="btn">Clear Highscore</button>
-                  </div>
+    <!--highscore content-->
+    <div class="container highscore-container d-none">
+      <div class="row main-div-margin quiz-box-margin">
+        <div class="col-md-12 main-content-box quiz-box">
+          <div id="wrapper">
+            <div id="currentTime">
               </div>
-          </div>
+                <div id="questionsDiv">
+                  <h2>Highscores</h2>
+                  <hr>
+                  <ul id="highScore"></ul>
+                  <!-- buttons -->
+                  <button id="goBack" class="btn" onclick="location.href='https://xander-deanna.github.io/code-quiz/'" type="button">Go Back</button>
+                  <button id="clear" value="reset" class="btn">Clear Highscore</button>
+                </div>
+            </div>
         </div>
       </div>
+    </div>
     
-      <!-- footer-->
-      <footer class="footer mt-auto py-3 bg-dark">
-        <div class="container">
-          <span>Made with 🖤 by Deanna</span>
-        </div>
-      </footer>
+    <!-- footer-->
+    <footer class="footer mt-auto py-3 bg-dark">
+      <div class="container">
+        <span>Made with 🖤 by Deanna</span>
+      </div>
+    </footer>
 
-      <!-- linking Script -->
-      <script src="Assets/js/script.js"></script>
-    </body>
+    <!-- linking Script -->
+    <script src="Assets/js/script.js"></script>
+  </body>
+</html>
